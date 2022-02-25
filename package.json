@@ -1,0 +1,32 @@
+{
+  "name": "reserved-ip",
+  "version": "0.0.2",
+  "description": "check if IP address is reserved.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "node test",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "node ./node_modules/typescript/bin/tsc --module esnext --target es5 -outDir dist/esm",
+    "build:cjs": "node ./node_modules/typescript/bin/tsc --module commonjs --target es5 -outDir dist/cjs"
+  },
+  "keywords": [
+    "reserved IP",
+    "private IP",
+    "internal IP"
+  ],
+  "author": "rerurn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reruin/reserved-ip.git"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
