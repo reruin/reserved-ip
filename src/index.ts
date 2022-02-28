@@ -118,7 +118,4 @@ const isIPv6 = (ip: string) => {
     : /^([\da-f]{1,4}:){6}([\da-f]{1,4}:[\da-f]{1,4}|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))$/i.test(ip);
 }
 
-export default function isReservedIP(ip: string) { return isIPv4(ip) ? checkIPv4(ip) : isIPv6(ip) ? checkIPv6(ip) : undefined }
-
-// overwrite for cjs require
-module.exports = isReservedIP
+export function isReservedIP(ip: string) { return isIPv4(ip) ? checkIPv4(ip) : isIPv6(ip) ? checkIPv6(ip) : undefined }

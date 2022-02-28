@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "declaration": true,
+    "declaration": false,
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "./src"

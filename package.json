@@ -1,19 +1,16 @@
 {
   "name": "reserved-ip",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "check if IP address is reserved.",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "main": "./index",
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
     "test": "node test",
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "node ./node_modules/typescript/bin/tsc --module esnext --target es5 -outDir dist/esm",
-    "build:cjs": "node ./node_modules/typescript/bin/tsc --module commonjs --target es5 -outDir dist/cjs"
+    "build": "npm run build:cjs",
+    "build:cjs": "node ./node_modules/typescript/bin/tsc --module commonjs --target es5 -outDir dist"
   },
   "keywords": [
     "reserved IP",
