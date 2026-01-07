@@ -109,7 +109,7 @@ const checkIPv4 = (ip: string) => IPV4_RANGES.some(r => contains(intIP(ip), r))
 const checkIPv6 = (ip: string) => IPV6_EXP.some(expr => expr.test((ip)))
 
 const isIPv4 = (ip: string) => {
-  return /^0b[01]+$|^0x[\da-f]+$|^\d+$/i.test(ip) || (ip && ip.split('.').every(i => /^\d+$/.test(i) && parseInt(i) <= 255))
+  return /^0b[01]+$|^0x[\da-f]+$|^\d+$/i.test(ip) || (ip && ip.split('.').length == 4 && ip.split('.').every(i => /^\d+$/.test(i) && parseInt(i) <= 255))
 }
 
 const isIPv6 = (ip: string) => {
